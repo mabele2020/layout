@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Results</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container-fluid mt-4">
+    <h1>Manage Results</h1>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <label class="form-label">Select Year:</label>
+            <select class="form-select">
+                <option>2024</option>
+                <option>2025</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Select Semester:</label>
+            <select class="form-select">
+                <option>Semester 1</option>
+                <option>Semester 2</option>
+            </select>
+        </div>
+        <div class="col-md-4 d-flex align-items-end">
+            <button class="btn btn-primary">Filter Results</button>
+        </div>
+    </div>
+
+    <!-- Results Table -->
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Instructor</th>
+                    <th>Course</th>
+                    <th>Year</th>
+                    <th>Semester</th>
+                    <th>View Results</th>
+                    <th>Upload Results</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dr. John Doe</td>
+                    <td>CS1101 - Intro to Computer Science</td>
+                    <td>2024</td>
+                    <td>1</td>
+                    <td><button class="btn btn-info">View</button></td>
+                    <td><button class="btn btn-success">Upload</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

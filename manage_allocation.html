@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Course Allocations</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
+            <div class="position-sticky">
+                <h2 class="text-white text-center py-3">Admin Dashboard</h2>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Dashboard</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Manage Users</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Manage Instructors</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Manage Students</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Manage Courses</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Manage Results</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Manage Allocations</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="col-md-9 col-lg-10 px-md-4">
+            <h1>Manage Course Allocations</h1>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label class="form-label">Select Year:</label>
+                    <select class="form-select">
+                        <option>2025</option>
+                        <option>2026</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Select Semester:</label>
+                    <select class="form-select">
+                        <option>Semester 1</option>
+                        <option>Semester 2</option>
+                    </select>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button class="btn btn-primary">View Allocations</button>
+                </div>
+            </div>
+
+            <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addAllocationModal">+ Add New Allocation</button>
+
+            <!-- Allocation Table -->
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Instructor</th>
+                            <th>Course</th>
+                            <th>Year</th>
+                            <th>Semester</th>
+                            <th>Edit</th>
+                            <th>Drop</th>
+                            <th>Enrolled Students</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dr. Smith</td>
+                            <td>CSC101 - Intro to Programming</td>
+                            <td>2025</td>
+                            <td>1</td>
+                            <td><button class="btn btn-warning">Edit</button></td>
+                            <td><button class="btn btn-danger">Drop</button></td>
+                            <td><button class="btn btn-info">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- Add Allocation Modal -->
+<div class="modal fade" id="addAllocationModal" tabindex="-1" aria-labelledby="addAllocationLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addAllocationLabel">Assign Course to Instructor</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label class="form-label">Instructor</label>
+                    <select class="form-select">
+                        <option>Dr. Smith</option>
+                        <option>Prof. Johnson</option>
+                    </select>
+
+                    <label class="form-label">Course</label>
+                    <select class="form-select">
+                        <option>CSC101 - Intro to Programming</option>
+                        <option>IT202 - Database Management</option>
+                    </select>
+
+                    <label class="form-label">Year</label>
+                    <input type="number" class="form-control">
+
+                    <label class="form-label">Semester</label>
+                    <select class="form-select">
+                        <option>Semester 1</option>
+                        <option>Semester 2</option>
+                    </select>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button class="btn btn-primary">Save Allocation</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center mt-5">
+    <p>© 2025 The State University of Zanzibar | Version 1.0.2</p>
+</footer>
+
+<script src="bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

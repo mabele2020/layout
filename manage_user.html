@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Dashboard</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <a href="#">Dashboard</a>
+        <a href="#">Manage Users</a>
+        <a href="#">Manage Instructors</a>
+        <a href="#">Manage Students</a>
+        <a href="#">Manage Courses</a>
+        <a href="#">Manage Results</a>
+        <a href="#">Manage Allocations</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <span class="navbar-brand">Admin Name</span>
+                <div class="dropdown ms-auto">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        Account
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Change Password</a></li>
+                        <li><a class="dropdown-item" href="#">Change Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- User Table -->
+        <h1>Manage Users</h1>
+        <input type="text" class="form-control mb-3" placeholder="Search users...">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                    <th>Block/Activate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>JohnDoe</td>
+                    <td>john@example.com</td>
+                    <td>Administrator</td>
+                    <td><button class="btn btn-warning">Edit</button></td>
+                    <td><button class="btn btn-danger">Delete</button></td>
+                    <td><button class="btn btn-secondary">Block</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">Add New User</button>
+    </div>
+</div>
+
+<!-- Add User Modal -->
+<div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addUserLabel">Add New User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control">
+
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control">
+
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control">
+
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control">
+
+                    <label class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control">
+
+                    <label class="form-label">User Role</label>
+                    <select class="form-select">
+                        <option>Administrator</option>
+                        <option>Instructor</option>
+                        <option>Student</option>
+                    </select>
+
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control">
+
+                    <label class="form-label">User Status</label>
+                    <select class="form-select">
+                        <option>Active</option>
+                        <option>Blocked</option>
+                    </select>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button class="btn btn-primary">Save User</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center mt-5">
+    <p>© 2025 The State University of Zanzibar | Version 1.0.2</p>
+</footer>
+
+<script src="bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
